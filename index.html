@@ -12,10 +12,12 @@
 <body>
   <div class="hero">
     <nav>
-        <img src="images/logo" class="logo">
-        <ul>
+        <div class="logo">
+            <h2> NAOMI UWASE</h2>
+        </div>
+        <ul id="menuList">
             <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
+            <li><a href="#about">ABOUT</a></li>
             <li><a href="#">PORTFOLIO</a></li>
             <li><a href="#">SERVICES</a></li>
             <li><a href="#">HIRE ME</a></li>
@@ -26,8 +28,12 @@
                 <i class="fas fa-sun" id="sun"></i>
             </div>
         </div>
-        <div class="nav_menu_btn">
-            <i class="fa fa-bars" onclick="MyMenuFunction();"></i>
+        <div class="menu-icon">
+            <input type="checkbox" id="check">
+            <label for="check" class="menu-toggle">
+            <i class="fa-solid fa-bars" id="btn" onclick="toggleMenu()"></i>
+            <i class="fas fa-times" id="cancel" onclick="cancelMenu()"></i>
+        </label>
         </div>
     </nav>
     <div class="detel">
@@ -37,15 +43,79 @@
         </p>
         <a href="#"> DOWNLOAD CV</a>
     </div>
-   <div class="images">
-    <img src="images/shape" class="shape">
-    <img src="images/me" class="girl">
+    <div class="images images-container"> 
+    <img src="images/me.jpg" class="girl">
    </div>
-  
     </div>
-    
- 
+    <br>
+    <br>
+    <!--==================== ABOUT ====================-->
+<section class="about section" id="about">
+    <div class="about__title">
+        <h2 class="about__title-text">ABOUT</h2>
+        <span class="section__subtitle">My Introduction</span>
+    </div>
 
+    <div class="about__container container grid">
+        <img src="packages/images/pras-2.jpeg" alt="" class="about__img">
+        <div class="about__data">
+            <p class="about__description">
+                I'm a second year BIT undergraduate, passionate about technology. I have a self-motivated and can-do attitude, thriving in challenging and dynamic environments. Seeking a competitive position to enhance my skills and contribute to a professional organization. I'm very much passionate to learn new stuff that interests me and can help me to get better.
+            </p>
+            <div class="about__info">
+                <div>
+                    <span class="about__info-title">78%+</span>
+                    <span class="about__info-name">Percentage <br> Marks</span>
+                </div>
+                <div>
+                    <span class="about__info-title">01+</span>
+                    <span class="about__info-name">Months <br> Experience</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+     
+    <script>
+        
+        document.getElementById("check").addEventListener("change", function() {
+            var cancelIcon = document.getElementById("cancel");
+            var menuIcon = document.getElementById("btn");
+            if (this.checked) {
+                cancelIcon.style.display = "block"; 
+                menuIcon.style.display = "none"; 
+            } else {
+                cancelIcon.style.display = "none"; 
+                menuIcon.style.display = "block"; 
+            }
+        });
+        function cancelMenu() {
+      var cancelIcon = document.getElementById("cancel");
+      var menuIcon = document.getElementById("btn");
+      var menuList = document.getElementById("menuList");
+  
+      cancelIcon.style.display = "none"; 
+      menuIcon.style.display = "block"; 
+      menuList.style.maxHeight = "0px"; 
+  }
+  
+    
+          let menuList = document.getElementById("menuList")
+          menuList.style.maxHeight = "0px";
+          function toggleMenu(){
+              if(menuList.style.maxHeight == "0px")
+              {
+                  menuList.style.maxHeight = "300px";
+              }
+              else{
+                  menuList.style.maxHeight = "0px";
+              }
+          }
+  
+      </script>
+    <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
 </html>
