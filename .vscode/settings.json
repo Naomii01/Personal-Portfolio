@@ -1,3 +1,4 @@
 {
-    "DockerRun.DisableDockerrc": true
+    "tailwindCSS.emmetCompletions": true,
+    "css.validate": false
 }
