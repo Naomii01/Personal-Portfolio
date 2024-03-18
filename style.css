@@ -10,6 +10,21 @@
     background:#eff4fd;
 
 }
+body {
+    background-color: #eff4fd; 
+    color: #212121; 
+}
+body.dark{
+    --bg-color:#242526;
+    --first-color:#ffffffff;
+    --second-color:#eeeeeeee;
+    --black-color:#ffffff;
+    --medium-dark:#242526;
+    --icons-bg:#f4f4f4;
+    --mode-color:#ccc;
+    background-color: var(--bg-color);
+    color: var(--first-color);
+}
 nav{
     display: flex;
     width: 84%;
@@ -33,7 +48,7 @@ nav ul li a:hover{
 }
 .detel{
     margin-left:8% ;
-    margin-top: 15%;
+    margin-top: 13%;
 }
 .detel h1{
     font-size: 50px;
@@ -46,4 +61,63 @@ span{
 .detel p{
     color: #555;
     line-height: 22px;
+}
+.detel a {
+    background: #212121;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+.images{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+.images img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom:0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+.images:hover .shape{
+    bottom: 40px;
+
+}
+.images:hover .girl{
+    left:45%;
+}
+
+.mode{
+    display: flex;
+    align-items: center;
+}
+.moon-sun{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-radius: 8px;
+    width: 60px;
+    cursor: pointer;
+    background: var(--mode-color);
+}
+.moon-sun:is(#moon,#sun){
+    position: relative;
+    color: var(--medium-dark);
+    transition: .2s ease-in-out;
+}
+body.dark #sun{
+    opacity: 1;
+}
+body.dark #moon{
+    opacity: 0;
 }
