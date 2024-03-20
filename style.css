@@ -1,5 +1,5 @@
 /* Add your CSS styles here */
-* {
+body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', 'sans-serif';
@@ -121,7 +121,7 @@ span {
     position: absolute;
     left: 40%;
     right: 15%;
-    top: -2%;
+    top: -5%;
     bottom: -2%;
     transform: translateX(-50%);
     transition: bottom 1s, left 1s;
@@ -137,12 +137,17 @@ span {
     left: 45%;
 }
 
-.images img.girl {
-    /* Change the positioning to relative */
-    position: relative;
-    /* Apply max-width and max-height to fit the container */
-    max-width: 100%;
-    max-height: 100%;
+
+.social-media {
+    background-color: #eff4fd;
+}
+
+.social-media img {
+    width: 15px; 
+    height: 15px;
+    margin-right: 40px; 
+    padding: none;
+   color: #eff4fd;
 }
 
 /*==================== ABOUT ====================*/
@@ -212,8 +217,139 @@ span {
     flex: 1; /* Take remaining space */
 }
 
-/*==================== CONTACT ME ====================*/
+/* -------PROJECTS----*/ 
+/* Portfolio Section */
+.portfolio {
+    padding: 100px 0;
+  }
+  
+  .portfolio__title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .portfolio__subtitle {
+    display: block;
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+  }
+  
+  .portfolio__container {
+    position: relative;
+  }
+  
+  .portfolio__content {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .portfolio__img {
+    width: 50%;
+    height: 50%;
+    margin-left: 300px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .portfolio__data {
+    padding: 20px;
+  }
+  
+  .portfolio__title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .portfolio__description {
+    margin-bottom: 20px;
+  }
+  
+  .portfolio__button {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .portfolio__button:hover {
+    background-color: #555;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    background-color: #555;
+  }
+  
+  .swiper-portfolio-icon {
+    font-size: 1.5rem;
+  }
+  
+  .swiper-button-next {
+    right: 0;
+  }
+  
+  .swiper-button-prev {
+    left: 0;
+  }
+  
+  .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #555;
+  }
+  
 
+/*==================== FOOTER ====================*/
+footer {
+    background-color: black;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+footer h4 {
+    margin: 0 !important; /* Reset margin to remove any default margin */
+    color: white; /* Set text color to white */
+}
 /*---------------------DARK LIGHT MODE------------------------------*/
 
 .mode {
@@ -221,33 +357,12 @@ span {
     align-items: center;
 }
 
-/* dark color scheme */
-body.dark-theme {
-    --first-color-second: hsl(var(--hue-color), 30%, 8%);
-    --title-color: hsl(var(--hue-color), 8%, 95%);
-    --text-color: hsl(var(--hue-color), 8%, 75%);
-    --input-color: hsl(var(--hue-color), 29%, 16%);
-    --body-color: hsl(var(--hue-color), 28%, 12%);
-    --container-color: hsl(var(--hue-color), 29%, 16%);
-    transition: 0.3s ease-in;
-}
 
 .nav-btns {
     display: flex;
     align-items: center;
 }
 
-/* theme */
-.change-theme {
-    font-size: 1.25rem;
-    color: var(--title-color);
-    margin-right: 1rem;
-    cursor: pointer;
-}
-
-.change-theme:hover {
-    color: var(--first-color);
-}
 
 /* theme transition */
 .header,

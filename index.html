@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,17 +9,26 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-<body>
+<body class="dark:bg-gray-900">
     <!---HOME-->
     
+   
+  
+  
+         <!---HOME-->
     <div class="hero">
-        <nav class="sticky top-0 z-50 bg-white shadow">
+        <nav class="sticky top-0 z-50 bg-white shadow dark:bg-gray-800">
             <!-- Nav container with flexbox layout -->
             <div class="flex justify-between items-center px-4">
                 <!-- Logo on the left -->
                 <div class="logo">
                     <h2 class="text-xl font-bold">NAOMI UWASE</h2>
                 </div>
+                <!-- Sun and Moon icons -->
+                <button class="focus:outline-none" onclick="toggleMode()">
+                    <i id="sunIcon" class="far fa-sun text-yellow-500 text-2xl"></i>
+                    <i id="moonIcon" class="far fa-moon text-gray-800 text-2xl hidden"></i>
+                </button>
                 <!-- Menu icon for smaller screens -->
                 <div class="menu-icon md:hidden">
                     <input type="checkbox" id="check">
@@ -30,24 +39,39 @@
                 </div>
                 <!-- Menu list -->
                 <ul id="menuList" class="menu-list md:flex hidden">
-                    <li><a href="#" class="text-black font-semibold px-4 py-2">HOME</a></li>
-                    <li><a href="#about" class="text-black font-semibold px-4 py-2">ABOUT</a></li>
-                    <li><a href="#skills" class="text-black font-semibold px-4 py-2">SKILLS</a></li>
-                    <li><a href="#" class="text-black font-semibold px-4 py-2">SERVICES</a></li>
-                    <li><a href="#" class="text-black font-semibold px-4 py-2">HIRE ME</a></li>
+                    <li><a href="#" class="text-black dark-mode-toggle font-semibold px-4 py-2">HOME</a></li>
+                    <li><a href="#skills" class="text-black dark-mode-toggle font-semibold px-4 py-2">SKILLS</a></li>
+                    <li><a href="#projects" class="text-black dark-mode-toggle font-semibold px-4 py-2">PROJECTS</a></li>
+                    <li><a href="#contact" class="text-black dark-mode-toggle font-semibold px-4 py-2">CONTACTS</a></li>
                 </ul>
             </div>
             <!-- Navigation line -->
             <div class="nav-line"></div>
-
         </nav>
     </div>
   
     <!-- Content -->
     <div class="detel">
-        <h1>I'm Naomi<span> Uwase</span></h1>
-        <p>This is my official portfolio website to show all<br> Details and work experiment web development</p>
-        <a href="#">DOWNLOAD CV</a>
+        <h1 class="dark-mode-toggle">I'm Naomi<span> Uwase</span></h1>
+        <p class="dark-mode-toggle">This is my official portfolio website to show all<br> Details and skills projects and my contacts</p>
+        <a href="#contact" class="dark-mode-toggle">DOWNLOAD CV</a>
+        <div class=" mb-4 flex gap-1 items-center font-semibold med dark-mode-toggle">
+            <p>Check out My: </p>
+            <div class="flex items-center space-x-3 flex-row">
+                <div class="social-media bg-blue-50 flex flex-row items-center space-x-3">
+                    <a href="https://github.com/Naomii01" target="_blank"><img src="images/github.png" alt="Github" class="w-8 h-8"></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" class="w-8 h-8"></a>
+                    <a href="https://mail.google.com/mail/u/?authuser=naomi222001220@gmail.com" target="_blank"><img src="images/email.png" alt="Email" class="w-8 h-8"></a>
+                    <a href="https://twitter.com/?lang=en" target="_blank"><img src="images/twitter.png" alt="Twitter" class="w-8 h-8"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-container">
+        <div class="images images-container"> 
+            <img src="images/shapeee.webp" class="shape">
+        </div>
     </div>
     <div class="content-container">
         <div class="images images-container"> 
@@ -56,44 +80,227 @@
     </div>
     <br>
 
-    <!----ABOUT------->
-    <section class="about section" id="about">
-        <h2 class="section-title">About Me</h2>
-        <span class="section-subtitle " style="display: block; text-align: center;">My Introduction</span>        <div class="flex flex-row items-center justify-center">
-            <hr> <!--horizontal Rule-->
-            <div class="p-4 rounded-l-lg w-1/4">
-                <img src="images/i want a brown skinn.jpg.jpg" class="w-48 h-48 object-cover rounded-lg mr-4">
-            </div>
-            <!-- Orange background block on the right -->
-            <div class="bg-orange-500 text-white p-4 rounded-r-lg w-3/4">
-                <h3 class="text-lg font-bold mb-2 text-black">About</h3>
-                <p class="text-blue-800">
-                    I'm a second-year BIT undergraduate student, passionate about technology and business. I have a self-motivated and can-do attitude, thriving in challenging and dynamic environments. Seeking a competitive position to enhance my skills and contribute to a professional organization. I'm very much passionate to learn new stuff that interests me and can help me to get better.
-                </p>
-                <div class="about-info mt-4">
-                    <div class="flex items-center mb-2">
-                        <span class="about-info-title mr-2">02+</span>
-                        <span class="about-info-name">Years experience</span>
-                    </div>
-                    <div class="flex items-center mb-2">
-                        <span class="about-info-title mr-2">20+</span>
-                        <span class="about-info-name">Completed project</span>
-                    </div>
-                    <div class="flex items-center">
-                        <span class="about-info-title mr-2">06+</span>
-                        <span class="about-info-name">Companies worked</span>
-                    </div>
-                </div>
-                <div class="about-buttons mt-4">
-                    <a download="" href="doc/Naomi_Uwase_Resume.docx" class="button button-flex text-blue-800">Download Resume<i class="fa-solid fa-file-arrow-down button-icon"></i></a>
-                </div>
-            </div>
+
+                    <!------SKILLS -------->
+
+                     <!-- service section -->
+    <section class="max-w-7xl mx-auto px-5 my-6 " id="skills">
+        <div class="text-center">
+          <h3 class="text-primary text-3xl font-bold mb-16 text-orange">SKILLS</h3>
         </div>
-    </section>
+        <!-- service cards -->
+        <div
+          class="my-16 flex flex-col md:flex-row justify-around items-center gap-12"
+        >
+          <div
+            class="w-[354px] px-5 py-8 rounded-lg border border-primary shadow-[#5dadec3b] cursor-pointer shadow-xl"
+          >
+            <img
+              src="images/javascript.jpg"
+              alt=""
+              class="w-[196px] mb-12 mx-auto"
+            />
+            <h5 class="text-center my-5 text-xl">Graphic Designer</h5>
+            <p class="text-justify">
+              strive to create visually impact designs that effectively
+              communicate ,messages & meet their unique needs.
+            </p>
+          </div>
+          <div
+            class="w-[354px] px-5 py-8 rounded-lg border border-primary shadow-[#5dadec3b] cursor-pointer shadow-xl"
+          >
+            <img
+              src="images/html.png"
+              alt=""
+              class="w-[196px] mb-12 mx-auto"
+            />
+            <h5 class="text-center my-5 text-xl">Graphic Designer</h5>
+            <p class="text-justify">
+              strive to create visually impact designs that effectively
+              communicate ,messages & meet their unique needs.
+            </p>
+          </div>
+          <div
+            class="w-[354px] px-5 py-8 rounded-lg border border-primary shadow-[#5dadec3b] cursor-pointer shadow-xl"
+          >
+            <img
+              src="images/css.png"
+              alt=""
+              class="w-[196px] mb-12 mx-auto"
+            />
+            <h5 class="text-center my-5 text-xl">Graphic Designer</h5>
+            <p class="text-justify">
+              strive to create visually impact designs that effectively
+              communicate ,messages & meet their unique needs.
+            </p>
+          </div>
+        </div>
+      </section>
+
+          <!--=================== Portfolio ===================-->
+          <section class="portfolio section" id="projects">
+            <h2 class="section-title text-center dark:text-white dark-mode-toggle">Projects</h2>
+            <span class="section-subtitle dark:text-white dark-mode-toggle" style="display: block; text-align: center;">Most recent work</span>
     
+            <div class="portfolio__container container swiper-container">
+              <div class="swiper-wrapper">
+                <!-- ------------------------portfollio 1-------------------- -->
+                <div class="portfolio__content grid swiper-slide">
+                  <img src="images/Screenshot (6).jpg" class="portfolio__img" />
     
+                  <div class="portfolio__data">
+                    <h3 class="portfolio__title">
+                      BR Architect
+                    </h3>
+                    <p class="portfolio__description">
+                       A BR Architect webpage clone from w3 schools 
+                    </p>
+                    <a
+                      href="https://www.w3schools.com/w3css/tryw3css_templates_architect.htm"
+                      class="button button--flex button--small portfolio__button"
+                    >
+                      GitHub Repository
+                      <i class="uil uil-external-link-alt button__icon"></i>
+                    </a>
+                    <a
+                      href="https://venkateeshh.github.io/Weather-App/"
+                      class="button button--flex button--small portfolio__button"
+                    >
+                      See Live
+                      <i class="uil uil-external-link-alt button__icon"></i>
+                    </a>
+                  </div>
+                </div>
     
+                <!-- ------------------------portfollio 2-------------------- -->
+                <div class="portfolio__content grid swiper-slide">
+                  <img src="images/Screenshot (7).jpg" class="portfolio__img" />
     
+                  <div class="portfolio__data">
+                    <h3 class="portfolio__title">Food BLog</h3>
+                    <p class="portfolio__description">
+                      Food Blog is a simplistic design for building a blogging website that makes a professional-looking blog view for food bloggers.
+                     
+                    </p>
+                    <a
+                      href="https://github.com/Venkateeshh/Spotify-Clone"
+                      class="button button--flex button--small portfolio__button"
+                    >
+                      GitHub Repository
+                      <i class="uil uil-external-link-alt button__icon"></i>
+                    </a>
+                    <a
+                      href="https://venkateeshh.github.io/Spotify-Clone/"
+                      class="button button--flex button--small portfolio__button"
+                    >
+                      See Live
+                      <i class="uil uil-external-link-alt button__icon"></i>
+                    </a>
+                  </div>
+                </div>
+                <!-- ------------------------portfollio 3-------------------- -->
+                <div class="portfolio__content grid swiper-slide">
+                  <img src="images/unnamed.jpg" class="portfolio__img" />
+    
+                  <div class="portfolio__data">
+                    <h3 class="portfolio__title">Language Translator</h3>
+                    <p class="portfolio__description">
+                      This language translator web app is a user-friendly tool built
+                      with HTML, CSS, and JavaScript. It leverages Google Translate
+                      API to seamlessly translate text between multiple languages.
+                      The app features a simple interface, ensuring smooth
+                      performance across devices..
+                    </p>
+                    <a
+                      href="https://github.com/Venkateeshh/Js-Language-Translator"
+                      class="button button--flex button--small portfolio__button"
+                    >
+                      GitHub Repository
+                      <i class="uil uil-external-link-alt button__icon"></i>
+                    </a>
+                    <a
+                      href="https://venkateeshh.github.io/Js-Language-Translator/"
+                      class="button button--flex button--small portfolio__button"
+                    >
+                      See Live
+                      <i class="uil uil-external-link-alt button__icon"></i>
+                    </a>
+                  </div>
+                </div>
+    
+                <!-- ------------------------portfollio 4-------------------- -->
+                <div class="portfolio__content grid swiper-slide">
+                  <img src="images/mm.jpg" class="portfolio__img" />
+    
+                  <div class="portfolio__data">
+                    <h3 class="portfolio__title">Sorting Visualizer</h3>
+                    <p class="portfolio__description">
+                      Sorting Visualizer is a Java-based project that allows users
+                      to visualize various sorting algorithms in action using a
+                      Graphical User Interface (GUI). It provides an interactive and
+                      educational way to understand how different sorting algorithms
+                      work by visually demonstrating their step-by-step sorting
+                      process.
+                    </p>
+                    <a
+                      href="https://github.com/Venkateeshh/Sorting-Visualizer"
+                      class="button button--flex button--small portfolio__button"
+                    >
+                      GitHub Repository
+                      <i class="uil uil-external-link-alt button__icon"></i>
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/posts/venkatesh-kamath-_algorithmdesign-sortingvisualizer-javaprojects-activity-7095437035125043200-fWDl?utm_source=share&utm_medium=member_desktop"
+                      class="button button--flex button--small portfolio__button"
+                    >
+                      See Live
+                      <i class="uil uil-external-link-alt button__icon"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- add arrows -->
+              <div class="swiper-button-next">
+                <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+              </div>
+              <div class="swiper-button-prev">
+                <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+              </div>
+              <!-- add pagination -->
+              <div class="swiper-pagination"></div>
+            </div>
+          </section>
+    <!-------CONTACT-------->
+
+    <div class="max-w-md mx-auto bg-#eff4fd p-6 rounded-lg shadow-md">
+    <h2 class="text-2xl font-bold mb-4" id="contact">Contact Me</h2>
+    <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+        <div class="mb-4">
+            <label for="name" class="block text-gray-700 font-bold mb-2">Name:</label>
+            <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500">
+        </div>
+
+        <div class="mb-4">
+            <label for="email" class="block text-gray-700 font-bold mb-2">Email:</label>
+            <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500">
+        </div>
+
+        <div class="mb-4">
+            <label for="message" class="block text-gray-700 font-bold mb-2">Message:</label>
+            <textarea id="message" name="message" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"></textarea>
+        </div>
+
+        <button type="submit" class="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600">Submit</button>
+    </form>
+</div>
+
+<br>
+<footer class="bg-black py-6 px-4 text-center">
+  <h4 class="text-white">Powered by <a href="@NaomiUwase"> @NaomiUwase</a></h4>
+</footer>
+
+
     
     <!-- JavaScript -->
     <script>
@@ -102,10 +309,12 @@
         menuList.classList.toggle("hidden");
     }
     
-    function cancelMenu() {
-        var menuList = document.getElementById("menuList");
-        menuList.classList.add("hidden");
-    }
+   
     </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="index.js"></script>
 </body>
 </html>

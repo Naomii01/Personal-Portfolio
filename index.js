@@ -1,20 +1,28 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const body = document.body;
-    const toggleSwitch = document.getElementById("toggle-switch");
 
-    // Check local storage for saved theme
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        body.classList.add(savedTheme);
-    }
+function toggleMode() {
+    const html = document.documentElement;
+    const elementsToToggle = document.querySelectorAll('.dark-mode-toggle');
+    const sunIcon = document.getElementById('sunIcon');
+    const moonIcon = document.getElementById('moonIcon');
 
-    toggleSwitch.addEventListener("click", () => {
-        // Toggle dark mode class on body
-        body.classList.toggle("dark-theme");
-        body.classList.toggle("light-theme");
-
-        // Save theme preference to local storage
-        const currentTheme = body.classList.contains("dark-theme") ? "dark-theme" : "light-theme";
-        localStorage.setItem('theme', currentTheme);
+    html.classList.toggle('dark');
+    elementsToToggle.forEach(element => {
+        element.classList.toggle('dark:text-white');
     });
-});
+    sunIcon.classList.toggle('hidden');
+    moonIcon.classList.toggle('hidden');
+}
+document.addEventListener("DOMContentLoaded", function () {
+    var swiper = new Swiper('.portfolio__container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  });
