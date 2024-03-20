@@ -73,12 +73,15 @@ nav ul li a:hover {
 }
 
 .detel {
+    background-color: #eff4fd; /* Set default background color */
     width: 45%;
     position: absolute;
     top: 50%; /* Adjust as needed */
-    bottom: 20%;
-    right: 700px; /* Adjust as needed */
+    right: 10%; /* Adjust as needed */
     transform: translateY(-50%);
+    padding: 20px;
+    right: 700px;
+    border-radius: 10px;
 }
 
 .detel h1 {
@@ -476,19 +479,25 @@ body.dark-mode {
         top: auto;
         right: auto;
     }
-    .images img {
-        width: 300px; /* Adjust as needed */
-        height: 300px; /* Adjust as needed */
-        top: calc(50% - 85px); /* Adjust as needed */
-        left: calc(50% - 85px); /* Adjust as needed */
-        border-radius: 50%; /* Maintain circular shape */
-        transform: none; /* Reset transform */
-    }
+   
+   
     .portfolio__img {
-        width: 50%;
-        height: 50%;
-        margin-left: 300px;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
+        width: 100%;
+        height: auto;
+        margin-left: 0px;
+        border-radius: 0;
     }
+   
+
+
+    .social-media {
+        bottom: 10px; /* Adjusted position */
+    }
+
+    .social-media img {
+        width: 25px; /* Adjusted size for smaller screens */
+        height: 25px; /* Adjusted size for smaller screens */
+        margin-right: 5px; /* Adjusted spacing */
+    }
+
 }
