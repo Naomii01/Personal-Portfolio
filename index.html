@@ -6,116 +6,106 @@
     <title>Portfolio - Naomi Uwase</title>
     <link href="/src/output.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-</head>
 <body>
-  <div class="hero">
-    <nav>
-        <div class="logo">
-            <h2> NAOMI UWASE</h2>
-        </div>
-        <ul id="menuList">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#">PORTFOLIO</a></li>
-            <li><a href="#">SERVICES</a></li>
-            <li><a href="#">HIRE ME</a></li>
-        </ul>
-        <div class="mode">
-            <div class="moon-sun" id="toggle-switch" >
-                <i class="fas fa-moon" id="moon"></i>
-                <i class="fas fa-sun" id="sun"></i>
-            </div>
-        </div>
-        <div class="menu-icon">
-            <input type="checkbox" id="check">
-            <label for="check" class="menu-toggle">
-            <i class="fa-solid fa-bars" id="btn" onclick="toggleMenu()"></i>
-            <i class="fas fa-times" id="cancel" onclick="cancelMenu()"></i>
-        </label>
-        </div>
-    </nav>
-    <div class="detel">
-        <h1>I,m Naomi<span> Uwase</span></h1>
-        <p>This is my official portfolio website to show all
-            <br> Details and work experiment web development
-        </p>
-        <a href="#"> DOWNLOAD CV</a>
-    </div>
-    <div class="images images-container"> 
-    <img src="images/me.jpg" class="girl">
-   </div>
-    </div>
-    <br>
-    <br>
-    <!--==================== ABOUT ====================-->
-<section class="about section" id="about">
-    <div class="about__title">
-        <h2 class="about__title-text">ABOUT</h2>
-        <span class="section__subtitle">My Introduction</span>
-    </div>
-
-    <div class="about__container container grid">
-        <img src="packages/images/pras-2.jpeg" alt="" class="about__img">
-        <div class="about__data">
-            <p class="about__description">
-                I'm a second year BIT undergraduate, passionate about technology. I have a self-motivated and can-do attitude, thriving in challenging and dynamic environments. Seeking a competitive position to enhance my skills and contribute to a professional organization. I'm very much passionate to learn new stuff that interests me and can help me to get better.
-            </p>
-            <div class="about__info">
-                <div>
-                    <span class="about__info-title">78%+</span>
-                    <span class="about__info-name">Percentage <br> Marks</span>
-                </div>
-                <div>
-                    <span class="about__info-title">01+</span>
-                    <span class="about__info-name">Months <br> Experience</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-     
-    <script>
-        
-        document.getElementById("check").addEventListener("change", function() {
-            var cancelIcon = document.getElementById("cancel");
-            var menuIcon = document.getElementById("btn");
-            if (this.checked) {
-                cancelIcon.style.display = "block"; 
-                menuIcon.style.display = "none"; 
-            } else {
-                cancelIcon.style.display = "none"; 
-                menuIcon.style.display = "block"; 
-            }
-        });
-        function cancelMenu() {
-      var cancelIcon = document.getElementById("cancel");
-      var menuIcon = document.getElementById("btn");
-      var menuList = document.getElementById("menuList");
-  
-      cancelIcon.style.display = "none"; 
-      menuIcon.style.display = "block"; 
-      menuList.style.maxHeight = "0px"; 
-  }
-  
+    <!---HOME-->
     
-          let menuList = document.getElementById("menuList")
-          menuList.style.maxHeight = "0px";
-          function toggleMenu(){
-              if(menuList.style.maxHeight == "0px")
-              {
-                  menuList.style.maxHeight = "300px";
-              }
-              else{
-                  menuList.style.maxHeight = "0px";
-              }
-          }
+    <div class="hero">
+        <nav class="sticky top-0 z-50 bg-white shadow">
+            <!-- Nav container with flexbox layout -->
+            <div class="flex justify-between items-center px-4">
+                <!-- Logo on the left -->
+                <div class="logo">
+                    <h2 class="text-xl font-bold">NAOMI UWASE</h2>
+                </div>
+                <!-- Menu icon for smaller screens -->
+                <div class="menu-icon md:hidden">
+                    <input type="checkbox" id="check">
+                    <label for="check" class="menu-toggle">
+                        <i class="fa-solid fa-bars" id="btn" onclick="toggleMenu()"></i>
+                        <i class="fas fa-times" id="cancel" onclick="cancelMenu()"></i>
+                    </label>
+                </div>
+                <!-- Menu list -->
+                <ul id="menuList" class="menu-list md:flex hidden">
+                    <li><a href="#" class="text-black font-semibold px-4 py-2">HOME</a></li>
+                    <li><a href="#about" class="text-black font-semibold px-4 py-2">ABOUT</a></li>
+                    <li><a href="#skills" class="text-black font-semibold px-4 py-2">SKILLS</a></li>
+                    <li><a href="#" class="text-black font-semibold px-4 py-2">SERVICES</a></li>
+                    <li><a href="#" class="text-black font-semibold px-4 py-2">HIRE ME</a></li>
+                </ul>
+            </div>
+            <!-- Navigation line -->
+            <div class="nav-line"></div>
+
+        </nav>
+    </div>
   
-      </script>
-    <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <!-- Content -->
+    <div class="detel">
+        <h1>I'm Naomi<span> Uwase</span></h1>
+        <p>This is my official portfolio website to show all<br> Details and work experiment web development</p>
+        <a href="#">DOWNLOAD CV</a>
+    </div>
+    <div class="content-container">
+        <div class="images images-container"> 
+            <img src="images/meee.jpg" class="girl">
+        </div>
+    </div>
+    <br>
+
+    <!----ABOUT------->
+    <section class="about section" id="about">
+        <h2 class="section-title">About Me</h2>
+        <span class="section-subtitle " style="display: block; text-align: center;">My Introduction</span>        <div class="flex flex-row items-center justify-center">
+            <hr> <!--horizontal Rule-->
+            <div class="p-4 rounded-l-lg w-1/4">
+                <img src="images/i want a brown skinn.jpg.jpg" class="w-48 h-48 object-cover rounded-lg mr-4">
+            </div>
+            <!-- Orange background block on the right -->
+            <div class="bg-orange-500 text-white p-4 rounded-r-lg w-3/4">
+                <h3 class="text-lg font-bold mb-2 text-black">About</h3>
+                <p class="text-blue-800">
+                    I'm a second-year BIT undergraduate student, passionate about technology and business. I have a self-motivated and can-do attitude, thriving in challenging and dynamic environments. Seeking a competitive position to enhance my skills and contribute to a professional organization. I'm very much passionate to learn new stuff that interests me and can help me to get better.
+                </p>
+                <div class="about-info mt-4">
+                    <div class="flex items-center mb-2">
+                        <span class="about-info-title mr-2">02+</span>
+                        <span class="about-info-name">Years experience</span>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <span class="about-info-title mr-2">20+</span>
+                        <span class="about-info-name">Completed project</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="about-info-title mr-2">06+</span>
+                        <span class="about-info-name">Companies worked</span>
+                    </div>
+                </div>
+                <div class="about-buttons mt-4">
+                    <a download="" href="doc/Naomi_Uwase_Resume.docx" class="button button-flex text-blue-800">Download Resume<i class="fa-solid fa-file-arrow-down button-icon"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    <!-- JavaScript -->
+    <script>
+    function toggleMenu() {
+        var menuList = document.getElementById("menuList");
+        menuList.classList.toggle("hidden");
+    }
+    
+    function cancelMenu() {
+        var menuList = document.getElementById("menuList");
+        menuList.classList.add("hidden");
+    }
+    </script>
 </body>
 </html>

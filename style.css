@@ -1,62 +1,98 @@
-*{
+/* Add your CSS styles here */
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', 'sans-serif';
-    background:#eff4fd;
-    
+    background: #eff4fd;
 }
-.hero{
+
+.hero {
     position: relative;
     width: 100%;
     height: 100vh;
-    background:#eff4fd;
-
+    background: #eff4fd;
 }
-nav{
-    display: flex;
-    width: 84%;
+nav {
+    position: relative;
+  background-color: #eff4fd !important;
+    width: 100%;
+    height: 80px; /* Adjust the height as needed */
     margin: auto;
     padding: 20px 0;
+ 
+}
+.nav-container {
+    background-color: #eff4fd;
+    display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative; 
+    margin-top: 20px;
 }
-.logo h2{
+
+.nav-line {
+    position: absolute;
+    bottom: -2px; /* Adjust as needed */
+    left: 0;
+    width: 100%; /* Line stretches across the container */
+    height: 2px; /* Adjust thickness as needed */
+    background: rgba(0, 0, 0, 0.5); /* Adjust color and opacity as needed */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* Adjust shadow properties as needed */
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+.logo h2 {
+    margin-left: 20px !important;
     text-decoration: none;
     color: black;
-    margin-top: 43px;
-    margin-right: 20px;
     font-weight: bold;
     font-size: 20px;
 }
-nav ul li{
-    display: inline-block;
+
+nav ul li {
     list-style: none;
-    margin: 10px 20px;
+    margin-left: 20px; /* Adjust margin as needed */
 }
-nav ul li a{
+
+nav ul li a {
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
-nav ul li a:hover{
+
+nav ul li a:hover {
     color: orange;
 }
-.detel{
-    margin-left:8% ;
-    margin-top: 13%;
+
+.detel {
+    width: 45%;
+    position: absolute;
+    top: 50%; /* Adjust as needed */
+    bottom: 20%;
+    right: 700px; /* Adjust as needed */
+    transform: translateY(-50%);
 }
-.detel h1{
+
+.detel h1 {
     font-size: 50px;
     color: #212121;
-    margin-bottom: 20px;
 }
-span{
+
+span {
     color: orange;
 }
-.detel p{
+
+.detel p {
     color: #555;
     line-height: 22px;
 }
+
 .detel a {
     background: #212121;
     padding: 10px 18px;
@@ -67,32 +103,40 @@ span{
     margin: 30px 0;
     border-radius: 5px;
 }
-.images-container{
-    background-color:#eff4fd ;
-    width: 45%;
-    height: 80%;
+
+.images-container {
+    background-color: #eff4fd;
+    width: 25%;
+    height: 50%;
     position: absolute;
     bottom: 0;
-    right: 100px;
+    right: 30px;
     overflow: hidden; /* To hide the overflow */
-    border-radius: 50%; 
+    border-radius: 40%;
 }
-.images img{
-    background-color:#eff4fd;
-    height: 100%;
+
+.images img {
+    background-color: #eff4fd;
+    height: 90%;
     position: absolute;
-    left: 50%;
-    bottom:0;
+    left: 40%;
+    right: 15%;
+    top: -2%;
+    bottom: -2%;
     transform: translateX(-50%);
     transition: bottom 1s, left 1s;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover;
 }
-.images:hover .shape{
-    bottom: 40px;
 
+.images:hover .shape {
+    bottom: 40px;
 }
-.images:hover .girl{
-    left:45%;
+
+.images:hover .girl {
+    left: 45%;
 }
+
 .images img.girl {
     /* Change the positioning to relative */
     position: relative;
@@ -101,136 +145,221 @@ span{
     max-height: 100%;
 }
 
-  
-  
+/*==================== ABOUT ====================*/
 
-  /*==================== ABOUT ====================*/
-  .about__title {
-    text-align: center;
-    margin-bottom: 20px; /* Adjust as needed */
+.section-title {
+   
+    margin-bottom: 20px !important; /* Adjust as needed */
+    font-size: 30px !important; /* Adjust the font size as needed */
 }
 
-.about__title-text {
-    font-size: 30px; /* Adjust the font size as needed */
+.section-subtitle {
+   
+    margin-bottom: 20px !important;
+    font-size: 26px !important; /* Adjust the font size as needed */
 }
 
-.section__subtitle {
-    font-size: 24px; /* Adjust the font size as needed */
-}
-
-  
-  .about__description {
-    text-align: center;
+.about__description {
+   
     margin-bottom: var(--mb-2-5);
-  }
-  
-  .about__info {
+}
+
+.about__info {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: var(--mb-2-5);
-  }
-  
-  .about__info-title {
+}
+
+.about__info-title {
     font-size: var(--h2-font-size);
     font-weight: var(--font-bold);
     color: var(--title-color);
-  }
-  
-  .about__info-name {
+}
+
+.about__info-name {
     font-size: var(--medium-font-size);
-  }
-  
-  .about__info-title,
-  .about__info-name {
+}
+
+.about__info-title,
+.about__info-name {
     display: block;
     text-align: center;
-  }
-  
-  .about__buttons {
-    display: flex;
-    justify-content: center;
-  }
+}
 
-.mode{
+.about__buttons {
     display: flex;
-    align-items: center;
-}
-.moon-sun{
-    position: relative;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    height: 40px;
-    border-radius: 8px;
-    width: 60px;
+}
+
+.about-img-container {
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    margin-right: 20px; /* Adjust as needed */
+    border-radius: 50%; /* Make it circular */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.about-img {
+    width: 300px; /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
+    top: calc(50% - 85px); /* Adjust as needed */
+    left: calc(50% - 85px); /* Adjust as needed */
+    border-radius: 50%; /* Maintain circular shape */
+    transform: none; /* Make it circular */
+}
+
+.about-data {
+    flex: 1; /* Take remaining space */
+}
+
+/*==================== CONTACT ME ====================*/
+
+/*---------------------DARK LIGHT MODE------------------------------*/
+
+.mode {
+    display: flex;
+    align-items: center;
+}
+
+/* dark color scheme */
+body.dark-theme {
+    --first-color-second: hsl(var(--hue-color), 30%, 8%);
+    --title-color: hsl(var(--hue-color), 8%, 95%);
+    --text-color: hsl(var(--hue-color), 8%, 75%);
+    --input-color: hsl(var(--hue-color), 29%, 16%);
+    --body-color: hsl(var(--hue-color), 28%, 12%);
+    --container-color: hsl(var(--hue-color), 29%, 16%);
+    transition: 0.3s ease-in;
+}
+
+.nav-btns {
+    display: flex;
+    align-items: center;
+}
+
+/* theme */
+.change-theme {
+    font-size: 1.25rem;
+    color: var(--title-color);
+    margin-right: 1rem;
     cursor: pointer;
-    background-color:lightgrey;
-    color:white;
 }
-#moon,#sun{
-   display: none;
+
+.change-theme:hover {
+    color: var(--first-color);
 }
-body.dark #sun{
-    display: block;
+
+/* theme transition */
+.header,
+.footer-bg {
+    transition: 0.3s ease-in;
 }
-body.dark #moon{
-   display: none;
-}
-.menu-icon{
+
+.menu-icon {
     display: none;
 }
-.menu-icon i{
-    color:black;
+
+.menu-icon i {
+    color: black;
     font-size: 30px;
 }
-#check{
+
+.menu-toggle {
+    display: flex;
+    align-items: center;
+}
+
+#check:checked + .menu-toggle #cancel {
+    display: block;
+}
+
+#check {
     display: none;
 }
+
 #cancel {
-    display: none; 
+    display: none;
 }
+
 #check:checked + .menu-toggle #cancel {
-    display: block; 
+    display: block;
 }
 
 #check:checked + .menu-toggle #btn {
-    display: none; 
+    display: none;
 }
 
+@media (max-width:700px){
+    .logo {
+        display: block;
+        text-align: center; /* Center the logo */
+        margin-bottom: 20px; /* Adjust margin as needed */
+    }
 
-@media (max-width:600px){
-
+    .logo h2 {
+        margin-top: 0; /* Reset top margin */
+    }
     nav ul{
         position: absolute;
-        top: 70px;
+        top: 80px;
         left: 0;
         right: 0;
-        height: 100%;
+        height: auto;
         flex-direction: column;
         text-align:center;
         background:#eff4fd;
         gap: 0;
         overflow:hidden;
         transition: all 0.5s;
+        z-index: 99;
     }
     nav ul li{
         padding:20px;
+        display: block;
 
     }
     nav ul li a{
+        display: block;
+        margin-bottom: 10px;
         color:black;
     }
     
     .menu-icon{
-        display: block;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 20px; /* Adjust as needed */
+        right: 20px; /* Adjust as needed */
+        z-index: 999; 
+    }
+    .menu-icon i {
+        color: black;
+        font-size: 30px;
+        cursor: pointer;
     }
     #menuList{
         transition: all 0.5s;
     }
-   
+    
       #check:checked + .menu-toggle #cancel {
     display: block; 
     }
-
-   
+    .detel {
+        position: relative;
+        width: 100%;
+        margin-top: 20px; /* Adjust as needed */
+        margin-right: auto;
+        margin-left: auto;
+        transform: none; /* Reset transform */
+        top: auto;
+        right: auto;
+    }
+    .images img {
+        width: 300px; /* Adjust as needed */
+        height: 300px; /* Adjust as needed */
+        top: calc(50% - 85px); /* Adjust as needed */
+        left: calc(50% - 85px); /* Adjust as needed */
+        border-radius: 50%; /* Maintain circular shape */
+        transform: none; /* Reset transform */
+    }
 }
