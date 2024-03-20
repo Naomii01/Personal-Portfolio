@@ -4,7 +4,7 @@ body {
     padding: 0;
     font-family: 'Poppins', 'sans-serif';
     background: #eff4fd;
-        overflow-x: hidden;
+    overflow-x: hidden;
     
 }
 
@@ -106,30 +106,36 @@ span {
     border-radius: 5px;
 }
 
-.images-container {
-    background-color: #eff4fd;
-    width: 25%;
-    height: 50%;
+/* Add your CSS styles here */
+.content-container {
     position: absolute;
-    bottom: 0;
-    right: 30px;
+    top: 10%; /* Adjust as needed */
+    left: 90%; /* Adjust as needed */
+    transform: translateX(-50%);
+    width: 65%; /* Adjust as needed */
+}
+
+.images-container {
+    position: relative;
+    width: 50%;
+    padding-top: 50%; /* This ensures a square container */
     overflow: hidden; /* To hide the overflow */
-    border-radius: 40%;
 }
 
 .images img {
-    background-color: #eff4fd;
-    height: 90%;
     position: absolute;
-    left: 40%;
-    right: 15%;
-    top: -5%;
-    bottom: -2%;
-    transform: translateX(-50%);
-    transition: bottom 1s, left 1s;
-    border-radius: 50%; /* Make the image circular */
-    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease; /* Add smooth transition for movement */
 }
+
+.images:hover img {
+    transform: translate(-50%, -50%) scale(1.1); /* Add hover effect for movement and scaling */
+}
+
 
 .images:hover .shape {
     bottom: 40px;
@@ -288,22 +294,73 @@ footer h4 {
     color: white; /* Set text color to white */
 }
 /*---------------------DARK LIGHT MODE------------------------------*/
-
-/* Define transitions for smooth rotation and color change */
-.rotate-90 {
-    transform: rotate(90deg);
+.theme-toggle-btn {
+    font-size: 18px;
+    cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.text-yellow-500 {
-    --tw-text-opacity: 1;
-    color: rgba(252, 211, 77, var(--tw-text-opacity)); /* Sun color */
+.theme-toggle-btn:hover {
+    background-color:lightgrey;
+    color:lightgrey;
+    transition: all 0.4s ease 0s;
+}
+body.dark-mode {
+    background-color: #333 !important;
+    color:white;
 }
 
-.text-gray-500 {
-    --tw-text-opacity: 1;
-    color: rgba(156, 163, 175, var(--tw-text-opacity)); /* Moon color */
+body.dark-mode header {
+    background-color: #333;
 }
+body.dark-mode .navbar {
+    background-color: #333;
+}
+
+body.dark-mode .navbar a {
+   
+    color:white;
+}
+body.dark-mode .content p{
+    color: white;
+}
+
+body.dark-mode .theme-toggle-btn {
+    transform: rotate(90deg);
+}
+/* Navbar Styles for Dark Mode */
+body.dark-mode nav {
+    background-color: #333 !important;
+    color: white;
+}
+
+body.dark-mode nav ul li a {
+    background-color: #333 !important;
+    color: white;
+}
+
+/* Detail Section Styles for Dark Mode */
+body.dark-mode .detel {
+    background-color: #333 !important;
+    color: white;
+}
+body.dark-mode .detel a,
+body.dark-mode .detel p{
+    background-color: #333 !important;
+    color: white;
+}
+body.dark-mode .logo h2{
+    color:white !important;
+}
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+/* Additional dark mode styles for specific elements if needed */
+.hero.dark-mode {
+    background-color: black;
+}
+
 
 
 
@@ -311,17 +368,7 @@ footer h4 {
     display: flex;
     align-items: center;
 }
-/* Dark mode styles */
-.dark {
-    /* Update styles for dark mode here */
-    background-color: #1f2937; /* Dark background color */
-    color: #f3f4f6; /* Light text color */
-}
 
-.dark-mode-toggle {
-    /* Update text color for dark mode */
-    color: #f3f4f6;
-}
 
 
 /* theme transition */
