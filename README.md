@@ -1,2 +1,2 @@
 # Personal Portfolio
-My portfolio
+My personal - portfolio with html, javascript , tailwind css and css and php
