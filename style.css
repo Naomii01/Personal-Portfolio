@@ -150,75 +150,10 @@ span {
    color: #eff4fd;
 }
 
-/*==================== ABOUT ====================*/
-
-.section-title {
-   
-    margin-bottom: 20px !important; /* Adjust as needed */
-    font-size: 30px !important; /* Adjust the font size as needed */
-}
-
-.section-subtitle {
-   
-    margin-bottom: 20px !important;
-    font-size: 26px !important; /* Adjust the font size as needed */
-}
-
-.about__description {
-   
-    margin-bottom: var(--mb-2-5);
-}
-
-.about__info {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: var(--mb-2-5);
-}
-
-.about__info-title {
-    font-size: var(--h2-font-size);
-    font-weight: var(--font-bold);
-    color: var(--title-color);
-}
-
-.about__info-name {
-    font-size: var(--medium-font-size);
-}
-
-.about__info-title,
-.about__info-name {
-    display: block;
-    text-align: center;
-}
-
-.about__buttons {
-    display: flex;
-    justify-content: center;
-}
-
-.about-img-container {
-    width: 200px; /* Adjust as needed */
-    height: 200px; /* Adjust as needed */
-    margin-right: 20px; /* Adjust as needed */
-    border-radius: 50%; /* Make it circular */
-    overflow: hidden; /* Hide any overflow */
-}
-
-.about-img {
-    width: 300px; /* Adjust as needed */
-    height: 300px; /* Adjust as needed */
-    top: calc(50% - 85px); /* Adjust as needed */
-    left: calc(50% - 85px); /* Adjust as needed */
-    border-radius: 50%; /* Maintain circular shape */
-    transform: none; /* Make it circular */
-}
-
-.about-data {
-    flex: 1; /* Take remaining space */
-}
 
 /* -------PROJECTS----*/ 
 /* Portfolio Section */
+
 .portfolio {
     padding: 100px 0;
   }
